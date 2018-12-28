@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -SearchBase "dc=sesonline,dc=us" | ForEach-Object {Set-ADUser -Identity $_.SamAccountName -PasswordNeverExpires $false}
